@@ -18,8 +18,9 @@ export class TitleComponent {
             <stencil-route-link url='/'>Banso, Software ng-neer</stencil-route-link>
           </h5>
           <nav class="my-2 my-md-0 mr-md-3">
+            <stencil-route-link class="p-2 black" url='/posts'>Posts</stencil-route-link>
             <stencil-route-link class="p-2 black" url='/projects'>Projects</stencil-route-link>
-            <stencil-route-link class="p-2 black" url='/blog'>Blog</stencil-route-link>
+            <stencil-route-link class="p-2 black" url='/talks'>Talks</stencil-route-link>
           </nav>
         </div>
       </div>

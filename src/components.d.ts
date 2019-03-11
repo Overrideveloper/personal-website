@@ -30,6 +30,9 @@ export namespace Components {
 
   interface ProjectComponent {}
   interface ProjectComponentAttributes extends StencilHTMLAttributes {}
+
+  interface TalkComponent {}
+  interface TalkComponentAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -40,6 +43,7 @@ declare global {
     'HomeComponent': Components.HomeComponent;
     'NavBar': Components.NavBar;
     'ProjectComponent': Components.ProjectComponent;
+    'TalkComponent': Components.TalkComponent;
   }
 
   interface StencilIntrinsicElements {
@@ -49,6 +53,7 @@ declare global {
     'home-component': Components.HomeComponentAttributes;
     'nav-bar': Components.NavBarAttributes;
     'project-component': Components.ProjectComponentAttributes;
+    'talk-component': Components.TalkComponentAttributes;
   }
 
 
@@ -88,6 +93,12 @@ declare global {
     new (): HTMLProjectComponentElement;
   };
 
+  interface HTMLTalkComponentElement extends Components.TalkComponent, HTMLStencilElement {}
+  var HTMLTalkComponentElement: {
+    prototype: HTMLTalkComponentElement;
+    new (): HTMLTalkComponentElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-root': HTMLAppRootElement
     'blog-component': HTMLBlogComponentElement
@@ -95,6 +106,7 @@ declare global {
     'home-component': HTMLHomeComponentElement
     'nav-bar': HTMLNavBarElement
     'project-component': HTMLProjectComponentElement
+    'talk-component': HTMLTalkComponentElement
   }
 
   interface ElementTagNameMap {
@@ -104,6 +116,7 @@ declare global {
     'home-component': HTMLHomeComponentElement;
     'nav-bar': HTMLNavBarElement;
     'project-component': HTMLProjectComponentElement;
+    'talk-component': HTMLTalkComponentElement;
   }
 
 

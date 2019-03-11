@@ -10,9 +10,10 @@ const config = {
   messagingSenderId: "934002954219"
 };
 
-const firebaseApp = firebase.initializeApp(config);
-const database = firebaseApp.firestore();
-export default database;
+const app = firebase.initializeApp(config);
+const database = app.firestore();
+const fbase = {database, firebase};
+export default fbase;
 
 
 // <h6 class="bold">AIMS</h6>

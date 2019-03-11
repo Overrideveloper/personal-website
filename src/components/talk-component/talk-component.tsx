@@ -4,41 +4,41 @@ import fbase from '../../firebase/index.js';
 
 const database = fbase.database;
 
-interface Post {
-  blog: string;
-  link: string;
+interface Talk {
   quote: string;
   title: string;
-  year: number;
+  year: string;
+  event: string;
+  link: string;
 }
 
 
 @Component({
-  tag: 'blog-component',
-  styleUrl: 'blog-component.css'
+  tag: 'talk-component',
+  styleUrl: 'talk-component.scss'
 })
 
-export class BlogComponent {
-  private posts: Array<any>;
+export class TalkComponent {
+  private talks: Array<any>;
 
   componentWillLoad() {
     NProgress.start();
-    return this.fetchPosts().then((posts: Array<any>) => {
-      this.posts = posts;
+    return this.fetchTalks().then((talks: Array<any>) => {
+      this.talks = talks;
       NProgress.done();
     }).catch((error: any) => {
       console.log(error);
     });
   }
 
-  fetchPosts() {
+  fetchTalks() {
     return new Promise((resolve, reject) => {
-      database.collection('posts').orderBy('year', 'desc').orderBy('title', 'asc').get().then((posts: any) => {
-        if (posts.size !== 0) {
+      database.collection('talks').orderBy('year', 'desc').orderBy('title', 'asc').get().then((talks: any) => {
+        if (talks.size !== 0) {
           const temp = [];
-          let count = posts.size;
-          posts.forEach((post) => {
-            temp.push(post.data());
+          let count = talks.size;
+          talks.forEach((talk) => {
+            temp.push(talk.data());
             count -= 1;
             if (count === 0) {
               resolve(temp)
@@ -46,7 +46,7 @@ export class BlogComponent {
           })
         } else {
           resolve([]);
-      }
+        }
       }).catch((error: any) => {
         reject(error);
       });
@@ -59,24 +59,22 @@ export class BlogComponent {
         <nav-bar></nav-bar>
         <main>
           <p class="container py-5">
-            <h3 id="intro">Posts</h3>
+            <h3 id="intro">Talks</h3>
             <p class="mt-5">
-              <p>I mostly write on web development and machine learning. Here are some of the things I have written.</p>
+              <p>I mostly speak on machine learning. Here are some of my talks.</p>
               <div class="row">
                 {
-                  this.posts.map((post: Post) => {
+                  this.talks.map((talk: Talk) => {
                     return (
                       <div class="col-md-6 mb-3">
                         <div class="card h-100">
                           <div class="card-body">
                             <h5 class="card-title bold">
-                              {post.title} ({post.year})
+                              {talk.title} ({talk.year})
                             </h5>
-                            <p class="card-text">"...{post.quote}"</p>
-                            <span class="card-link pull-left">
-                              {post.blog === 'dev.to' ? (<i class="fab fa-dev"></i>) : ''}
-                            </span>
-                            <a href={post.link} class="pull-right card-link ul">Read</a>
+                            <p class="card-text">"...{talk.quote}"</p>
+                            <span class="card-link pull-left bold">{talk.event}</span>
+                            <a href={talk.link} class="pull-right card-link ul">Slides</a>
                           </div>
                         </div>
                       </div>

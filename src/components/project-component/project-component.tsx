@@ -1,5 +1,8 @@
+declare var NProgress: any;
 import { Component } from '@stencil/core';
-import database from '../../firebase/index.js';
+import fbase from '../../firebase/index.js';
+
+const database = fbase.database;
 
 interface Project {
   name: string;
@@ -20,7 +23,9 @@ export class ProjectComponent {
   private projects: Array<any>;
 
   componentWillLoad() {
+    NProgress.start();
     return this.fetchProjects().then((projects: Array<any>) => {
+      NProgress.done();
       this.projects = projects;
     }).catch((error: any) => {
       console.log(error);
@@ -29,17 +34,20 @@ export class ProjectComponent {
 
   fetchProjects() {
     return new Promise((resolve, reject) => {
-      database.collection('projects').get().then((projects: any) => {
-        //console.log(projects)
-        const temp = [];
-        let count = projects.size;
-        projects.forEach((project) => {
-          temp.push(project.data());
-          count -= 1;
-          if (count === 0) {
-            resolve(temp)
-          }
-        })
+      database.collection('projects').orderBy('name', 'asc').get().then((projects: any) => {
+        if (projects.size !== 0) {
+          const temp = [];
+          let count = projects.size;
+          projects.forEach((project) => {
+            temp.push(project.data());
+            count -= 1;
+            if (count === 0) {
+              resolve(temp)
+            }
+          })
+        } else {
+          resolve([]);
+      }
       }).catch((error: any) => {
         reject(error);
       });
