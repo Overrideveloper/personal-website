@@ -1,0 +1,35 @@
+.black {
+  color: black !important;
+}
+.bold {
+  font-weight: 600;
+}
+
+.ud {
+  text-decoration-line: underline;
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+.ul {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+span.ud:hover, span.ul:hover {
+  background-color: goldenrod;
+  padding: 0.2em;
+  text-decoration-line: none;
+}
+
+a {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: goldenrod !important;
+}

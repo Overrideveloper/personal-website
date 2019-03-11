@@ -1,0 +1,81 @@
+.black, p {
+  color: black !important;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+#intro {
+  font-family: 'Tiempos' !important;
+}
+
+@media (min-width: 760px) {
+  .row > .col-md-4 {
+    border-right: solid 1px black;
+    margin-top: -1em !important;
+    margin-bottom: -5em !important;
+    padding: 0;
+  }
+}
+
+.ud {
+  text-decoration-line: underline;
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+.ul {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+span.ud:hover, span.ul:hover {
+  background-color: goldenrod;
+  padding: 0.2em;
+  text-decoration-line: none;
+}
+
+a {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: goldenrod !important;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0 !important;
+  margin: auto;
+}
+
+#img1 {
+  padding-right: 0.1em;
+  transition-property: all;
+  transition: ease;
+  transition-duration: 1s;
+}
+
+#img2 {
+  padding-left: 0.1em;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition-property: all;
+  transition: ease;
+  transition-duration: 1s;
+}
+
+#img2:hover {
+ filter: none;
+ opacity: 1;
+}
+
+.inline {
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+footer ul li, footer h6 {
+  display: inline;
+}
+
+footer {
+  border-top: 1px black solid;
+  margin-top: 5em;
+}

@@ -9,52 +9,48 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
 
-  interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
-  interface AppProfile {
-    'match': MatchResults;
-  }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
-
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface BlogComponent {}
+  interface BlogComponentAttributes extends StencilHTMLAttributes {}
+
+  interface FooterComponent {}
+  interface FooterComponentAttributes extends StencilHTMLAttributes {}
+
+  interface HomeComponent {}
+  interface HomeComponentAttributes extends StencilHTMLAttributes {}
+
+  interface NavBar {}
+  interface NavBarAttributes extends StencilHTMLAttributes {}
+
+  interface ProjectComponent {}
+  interface ProjectComponentAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'BlogComponent': Components.BlogComponent;
+    'FooterComponent': Components.FooterComponent;
+    'HomeComponent': Components.HomeComponent;
+    'NavBar': Components.NavBar;
+    'ProjectComponent': Components.ProjectComponent;
   }
 
   interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'blog-component': Components.BlogComponentAttributes;
+    'footer-component': Components.FooterComponentAttributes;
+    'home-component': Components.HomeComponentAttributes;
+    'nav-bar': Components.NavBarAttributes;
+    'project-component': Components.ProjectComponentAttributes;
   }
 
-
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
@@ -62,16 +58,52 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLBlogComponentElement extends Components.BlogComponent, HTMLStencilElement {}
+  var HTMLBlogComponentElement: {
+    prototype: HTMLBlogComponentElement;
+    new (): HTMLBlogComponentElement;
+  };
+
+  interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {}
+  var HTMLFooterComponentElement: {
+    prototype: HTMLFooterComponentElement;
+    new (): HTMLFooterComponentElement;
+  };
+
+  interface HTMLHomeComponentElement extends Components.HomeComponent, HTMLStencilElement {}
+  var HTMLHomeComponentElement: {
+    prototype: HTMLHomeComponentElement;
+    new (): HTMLHomeComponentElement;
+  };
+
+  interface HTMLNavBarElement extends Components.NavBar, HTMLStencilElement {}
+  var HTMLNavBarElement: {
+    prototype: HTMLNavBarElement;
+    new (): HTMLNavBarElement;
+  };
+
+  interface HTMLProjectComponentElement extends Components.ProjectComponent, HTMLStencilElement {}
+  var HTMLProjectComponentElement: {
+    prototype: HTMLProjectComponentElement;
+    new (): HTMLProjectComponentElement;
+  };
+
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'blog-component': HTMLBlogComponentElement
+    'footer-component': HTMLFooterComponentElement
+    'home-component': HTMLHomeComponentElement
+    'nav-bar': HTMLNavBarElement
+    'project-component': HTMLProjectComponentElement
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'blog-component': HTMLBlogComponentElement;
+    'footer-component': HTMLFooterComponentElement;
+    'home-component': HTMLHomeComponentElement;
+    'nav-bar': HTMLNavBarElement;
+    'project-component': HTMLProjectComponentElement;
   }
 
 
