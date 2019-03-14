@@ -1,5 +1,5 @@
 declare var NProgress: any;
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 import fbase from '../../firebase/index.js';
 
 const database = fbase.database;
@@ -20,9 +20,9 @@ interface Project {
 })
 
 export class ProjectComponent {
-  private projects: Array<any>;
+  @State() projects: Array<any> = [];
 
-  componentWillLoad() {
+  componentDidLoad() {
     NProgress.start();
     return this.fetchProjects().then((projects: Array<any>) => {
       NProgress.done();

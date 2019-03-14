@@ -1,5 +1,5 @@
 declare var NProgress: any;
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 import fbase from '../../firebase/index.js';
 
 const database = fbase.database;
@@ -19,9 +19,9 @@ interface Post {
 })
 
 export class BlogComponent {
-  private posts: Array<any>;
+  @State() posts: Array<any> = [];
 
-  componentWillLoad() {
+  componentDidLoad() {
     NProgress.start();
     return this.fetchPosts().then((posts: Array<any>) => {
       this.posts = posts;

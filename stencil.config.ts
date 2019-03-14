@@ -9,6 +9,11 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'www',
+      serviceWorker: {
+        globPatterns: [
+          '**/*.{js,css,json,jpeg,jpg,html,ico,png}'
+        ]
+      }
       // uncomment the following line to disable service workers in production
       // serviceWorker: null
     }

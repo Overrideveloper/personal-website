@@ -1,8 +1,8 @@
 {
-  "name": "stencil-starter-project-name",
+  "name": "overrideveloper",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "description": "Banso D. Wisdom (Overrideveloper's) Website",
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
@@ -10,10 +10,13 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "~0.16.2",
-    "@stencil/router": "~0.3.1",
+    "@stencil/core": "^0.18.0",
+    "@stencil/router": "^0.3.3",
     "@stencil/sass": "^0.1.1",
     "firebase": "^5.8.6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "workbox-build": "3.4.1"
+  }
 }
