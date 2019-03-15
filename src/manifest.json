@@ -1,13 +1,55 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "Banso D. Wisdom",
+  "short_name": "Banso",
+  "dir": "ltr",
+  "description": "Personal website of Banso D. Wisdom",
   "start_url": "/",
   "display": "standalone",
-  "icons": [{
-    "src": "assets/icon/icon.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
+  "icons": [
+    {
+      "src": "./assets/manifest-icons/16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/70.png",
+      "sizes": "70x70",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/310x150.png",
+      "sizes": "310x150",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/310x310.png",
+      "sizes": "310x310",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/manifest-icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
   "background_color": "#16161d",
-  "theme_color": "#16161d"
+  "theme_color": "#16161d",
+  "related_applications": [],
+  "prefer_related_applications": false
 }

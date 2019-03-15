@@ -74,7 +74,7 @@ export class TalkComponent {
                             </h5>
                             <p class="card-text">"...{talk.quote}"</p>
                             <span class="card-link pull-left bold">{talk.event}</span>
-                            <a href={talk.link} class="pull-right card-link ul">Slides</a>
+                            <a style={{float: 'right'}} href={talk.link} class="card-link ul">Slides</a>
                           </div>
                         </div>
                       </div>

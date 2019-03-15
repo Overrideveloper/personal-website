@@ -8,13 +8,18 @@
   Any global CSS variables should also be applied here.
 */
 
+@import url(../assets/css/bootstrap.min.css);
+@import url(../assets/nprogress/nprogress.css);
+
 @font-face {
-	font-family: 'Tiempos';
+  font-family: 'Tiempos';
+  font-display: fallback;
 	src: url(../assets/fonts/TiemposHeadline-Semibold.otf);
 }
 
 @font-face {
 	font-family: 'Graphik';
+  font-display: fallback;
 	src: url(../assets/fonts/Graphik-Regular.woff2);
 }
 
@@ -31,4 +36,61 @@ body {
     padding-left: 5em !important;
     padding-right: 5em !important;
   }
+}
+
+.icon {
+  max-width: 30px;
+  min-width: 30px;
+}
+
+.card {
+  border-radius: 0 !important;
+  border: 1px black solid !important;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.black, p {
+  color: black !important;
+}
+
+.ud {
+  text-decoration-line: underline;
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+#intro {
+  font-family: 'Tiempos' !important;
+}
+
+span.ud:hover {
+  background-color: goldenrod;
+  padding: 0.2em;
+  text-decoration-line: none;
+}
+
+a {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: goldenrod !important;
+}
+
+.ul {
+  transition-property: all;
+  transition: all;
+  transition-duration: 1s;
+}
+
+span.ud:hover, span.ul:hover {
+  background-color: goldenrod;
+  padding: 0.2em;
+  text-decoration-line: none;
 }

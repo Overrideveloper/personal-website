@@ -72,16 +72,16 @@ export class ProjectComponent {
                         <div class="card-body">
                           <h5 style={{color: project.color}} class="card-title bold">
                             {project.name}
-                            <span class="pull-right">
-                              {project.tech === 'ionic' ? (<img src="../../assets/icon/ionic.svg" class="icon" id="ionic" />) : ''}
-                              {project.tech === 'dotnet' ? (<img src="../../assets/icon/dot-net.svg" class="icon" id="ionic" />) : ''}
-                              {project.tech === 'js' ? (<i class="fab fa-js-square"></i>) : ''}
+                            <span style={{float: 'right'}}>
+                              {project.tech === 'ionic' ? (<img alt="ionic" src="../../assets/icon/ionic.svg" class="icon" />) : ''}
+                              {project.tech === 'dotnet' ? (<img alt="dotnet" src="../../assets/icon/dot-net.svg" class="icon" />) : ''}
+                              {project.tech === 'js' ? (<img alt="javascript" src="../../assets/icon/javascript.svg" class="icon" />) : ''}
                             </span>
                           </h5>
                           <p class="card-text">{project.desc1}</p>
                           <p class="card-text">{project.desc2}</p>
                           <p class="card-text">{project.desc3}</p>
-                          <a href={project.link} class="pull-right card-link ul">View</a>
+                          <a style={{float: 'right'}} href={project.link} class="card-link ul">View</a>
                         </div>
                       </div>
                     </div>

@@ -7,10 +7,15 @@ footer {
   margin-top: 5em;
 }
 
-ul.text-small #git:hover {
-  color: black !important;
-}
-
 #tweet:hover {
   color: #1da1f2 !important;
+}
+
+.btn-block button {
+  float: right !important;
+}
+
+.icon {
+  max-width: 20px !important;
+  min-width: 20px !important;
 }

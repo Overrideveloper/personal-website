@@ -74,9 +74,9 @@ export class BlogComponent {
                             </h5>
                             <p class="card-text">"...{post.quote}"</p>
                             <span class="card-link pull-left">
-                              {post.blog === 'dev.to' ? (<i class="fab fa-dev"></i>) : ''}
+                              {post.blog === 'dev.to' ? (<img alt="dev.to" src="../../assets/icon/dev-dot-to.svg" class="icon" />) : ''}
                             </span>
-                            <a href={post.link} class="pull-right card-link ul">Read</a>
+                            <a href={post.link} style={{float: 'right'}} class="card-link ul">Read</a>
                           </div>
                         </div>
                       </div>
