@@ -15,7 +15,7 @@ export class HomeComponent{
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-4">
-                <img alt="Banso D. Wisdom" style={{float: 'left'}} class="img" src="../../assets/img/3.jpg" id="img2"/>
+                <img alt="Banso D. Wisdom" style={{margin: 'auto', display: 'block'}} class="img" src="../../assets/img/3.jpg" id="img2"/>
               </div>
               <div class="col-md-8">
               <div class="container py-5">

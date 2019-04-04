@@ -2,10 +2,6 @@
   background: rgba(0, 0, 0, 0);
 }
 
-.black, a {
-  color: black !important;
-}
-
 #title1 {
   display: none;
 }
@@ -28,10 +24,9 @@
 }
 
 #nav {
-  border-bottom: 1px black solid;
+  border-bottom: 1px solid var(--border);
 }
 
 a:hover{
   text-decoration: none !important;
-  color: goldenrod !important;
 }
