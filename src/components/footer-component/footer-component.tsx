@@ -15,7 +15,6 @@ export class FooterComponent {
   @State() name: string;
   @State() email: string;
   @State() body: string;
-  @State() checked: boolean;
 
   setName(e: any) {
     this.name = e.srcElement.value;
@@ -33,30 +32,6 @@ export class FooterComponent {
     this.email = '';
     this.body = '';
     this.name = '';
-  }
-
-  darkMode() {
-    document.documentElement.style.setProperty('--background', 'rgb(5, 6, 14)');
-    document.documentElement.style.setProperty('--text', 'white');
-    document.documentElement.style.setProperty('--border', 'rgb(48, 57, 104)');
-    document.documentElement.style.setProperty('--hover', 'rgb(48, 57, 104)');
-    document.documentElement.style.setProperty('--header', '#a1a1a1');
-    document.documentElement.style.setProperty('--toggle', '#a1a1a1');
-    document.documentElement.style.setProperty('--svg', 'white');
-    document.documentElement.style.setProperty('--hover-text', 'white');
-    document.documentElement.style.setProperty('--card-bg', 'rgb(15, 18, 32)');
-  }
-
-  lightMode() {
-    document.documentElement.style.setProperty('--background', 'white');
-    document.documentElement.style.setProperty('--text', 'black');
-    document.documentElement.style.setProperty('--border', 'black');
-    document.documentElement.style.setProperty('--hover', 'goldenrod');
-    document.documentElement.style.setProperty('--header', 'black');
-    document.documentElement.style.setProperty('--toggle', 'lightgrey');
-    document.documentElement.style.setProperty('--svg', 'black');
-    document.documentElement.style.setProperty('--hover-text', 'white');
-    document.documentElement.style.setProperty('--card-bg', 'white');
   }
 
   handleSubmit(e: any) {
@@ -89,32 +64,7 @@ export class FooterComponent {
     return text.toUpperCase();
   }
 
-  toggleMode() {
-    switch (localStorage.getItem('MODE')) {
-      case '0':
-        this.darkMode();
-        setTimeout(() => {
-          localStorage.setItem('MODE', '1');
-        }, 1000);
-        break;
-      case '1':
-        this.lightMode();
-        setTimeout(() => {
-          localStorage.setItem('MODE', '0');
-        }, 1000);
-        break;
-
-      default:
-        this.lightMode();
-        setTimeout(() => {
-          localStorage.setItem('MODE', '0');
-        }, 1000);
-        break;
-    }
-  }
-
   render() {
-    localStorage.getItem('MODE') === '1' ? this.checked = true : this.checked = false;
     return(
       <footer class="pt-4">
         <div class="container-fluid">
@@ -139,16 +89,6 @@ export class FooterComponent {
                     </svg> @overrideveloper
                   </a>
                 </li>
-                <li><br/>
-                  <div id="toggle" class="mt-4">
-                    <label class="mr-2">Dark Mode:</label>
-                    <label onClick={() => this.toggleMode()} class="switch">
-                      <label htmlFor="checker" hidden>Checker</label>
-                      <input checked={this.checked} id="checker" type="checkbox" />
-                      <span class="slider round"></span>
-                    </label>
-                  </div>
-                </li>
               </ul>
             </div>
             <div class="col-md-6">
@@ -161,11 +101,11 @@ export class FooterComponent {
                 <div class="row">
                   <div class="form-group col-md-5">
                     <label htmlFor="name">Your name</label>
-                    <input id="name" required value={this.name} onInput={($event) => this.setName($event)} class="form-control" placeholder="Sunday Dagboru" />
+                    <input id="name" required value={this.name} onInput={($event) => this.setName($event)} class="form-control" placeholder="Ciroma Chukwuma Adekunle" />
                   </div>
                   <div class="form-group col-md-7">
                     <label htmlFor="email">Your email address</label>
-                    <input id="email" required value={this.email} onInput={($event) => this.setEmail($event)} type="email" class="form-control" placeholder="sundaydagboru@iyalaya.anybody" />
+                    <input id="email" required value={this.email} onInput={($event) => this.setEmail($event)} type="email" class="form-control" placeholder="ciroma@chukwuma.adekunle" />
                   </div>
                 </div>
                 <div class="form-group">
