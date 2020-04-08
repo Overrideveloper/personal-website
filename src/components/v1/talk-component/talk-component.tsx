@@ -1,6 +1,8 @@
 declare var NProgress: any;
-import { Component, State } from '@stencil/core';
-import fbase from '../../firebase/index.js';
+
+import { Component, State, h } from '@stencil/core';
+import fbase from '../../../firebase/index.js';
+import store from '../../../store';
 
 const database = fbase.database;
 
@@ -19,13 +21,15 @@ interface Talk {
 })
 
 export class TalkComponent {
-  @State() talks: Array<any> = [];
+  @State() talks: Array<any> = store.get("talks");
 
   componentDidLoad() {
     NProgress.start();
     return this.fetchTalks().then((talks: Array<any>) => {
-      this.talks = talks;
       NProgress.done();
+      store.set("talks", talks);
+
+      this.talks = talks;
     }).catch((error: any) => {
       console.log(error);
     });

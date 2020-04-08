@@ -3,11 +3,11 @@ footer ul li, footer h6 {
 }
 
 .dark-text {
-  color: var(--header) !important;
+  color: var(--v1-header) !important;
 }
 
 footer {
-  border-top: 1px var(--border) solid;
+  border-top: 1px var(--v1-border) solid;
   margin-top: 5em;
 }
 
@@ -21,7 +21,7 @@ footer {
 }
 
 label, .form-text, a {
-  color: var(--header) !important;
+  color: var(--v1-header) !important;
 }
 
 #toggle {
@@ -48,7 +48,7 @@ label, .form-text, a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--toggle);
+    background-color: var(--v1-toggle);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -66,7 +66,7 @@ label, .form-text, a {
   }
 
   input:checked + .slider {
-    background-color: var(--border);
+    background-color: var(--v1-border);
   }
 
   input:checked + .slider:before {

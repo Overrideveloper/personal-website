@@ -24,7 +24,7 @@
 }
 
 #nav {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--v1-border);
 }
 
 a:hover{

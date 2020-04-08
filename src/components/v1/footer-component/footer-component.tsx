@@ -1,6 +1,6 @@
 declare var NProgress: any;
-import { Component , State} from '@stencil/core';
-import fbase from '../../firebase/index.js';
+import { Component, State, h } from '@stencil/core';
+import fbase from '../../../firebase/index.js';
 import '@stencil/router';
 
 const database = fbase.database;

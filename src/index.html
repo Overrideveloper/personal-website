@@ -20,17 +20,17 @@
     <meta name="robots" content="index, nofollow" />
 
     <link href="/build/app.css" rel="stylesheet">
-    <script src="/build/app.js"></script>
+
+    <script nomodule src="/build/app.js"></script>
+    <script type="module" src="/build/app.esm.js"></script>
 
     <script defer src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
-    <div class="py-4">
-      <app-root></app-root>
-      <noscript>
-        Banso's Website is not able to load at this time. Try again later.
-      </noscript>
-    </div>
+    <core-root></core-root>
+    <noscript>
+      Banso's Website is not able to load at this time. Try again later.
+    </noscript>
   </body>
 </html>
