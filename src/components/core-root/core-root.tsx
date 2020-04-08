@@ -26,6 +26,17 @@ export class CoreRoot {
           }}
           />
 
+          <stencil-route url="/v2" routeRender={() => {
+            return (
+              <app-v2>
+                <div class="app-v2 container-fluid px-0">
+                  <stencil-route url="/v2" exact={true} component="v2-home" />
+                </div>
+              </app-v2>
+            );
+          }}
+          />
+
         </stencil-route-switch>
       </stencil-router>
     );

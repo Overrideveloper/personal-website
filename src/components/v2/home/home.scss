@@ -1,0 +1,160 @@
+.root {
+    height: 100vh;
+}
+
+.intro {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    animation: disableIntro 1ms 6.3s both;
+
+    .bar {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        animation: barAnimation 1s 3.5s both;
+
+        &#bar-2 {
+            animation-delay: 4.0s;
+        }
+
+        &#bar-3 {
+            animation-delay: 4.6s;
+        }
+
+        &#bar-4 {
+            animation-delay: 5.0s;
+        }
+
+        &#bar-5 {
+            animation-delay: 5.2s;
+        }
+
+        &#bar-6 {
+            animation-delay: 5.6s;
+        }
+
+        &#bar-7 {
+            animation-delay: 6.0s;
+        }
+
+        &#bar-8 {
+            animation-delay: 6.2s;
+        }
+    }
+
+    .bio {
+        background-color: transparent;
+        position: absolute;
+        top: 45%;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+        .bio-item {
+            font-size: 25px;
+            margin-right: 10px;
+
+            &#engineer {
+                animation: bioAnimation 1s forwards, bioAnimation 1s 3.5s reverse forwards;
+            }
+
+            &#writer {
+                animation: bioAnimation 1s 0.5s both, strikethroughAnimation 1s 2.4s both, bioAnimation 1s 3.7s reverse forwards;
+            }
+
+            &#speaker {
+                animation: bioAnimation 1s 1s both, strikethroughAnimation 1s 2.8s both, bioAnimation 1s 3.9s reverse forwards;
+            }
+
+            &#gamer {
+                animation: bioAnimation 1s 1.5s both, bioAnimation 1s 4.1s reverse forwards;
+            }
+        }
+    }
+
+    @keyframes bioAnimation {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes barAnimation {
+        from { height: 100%; }
+        to { height: 0; }
+    }
+
+    @keyframes strikethroughAnimation {
+        from { text-decoration-line: none; }
+        to { text-decoration-line: line-through; }
+    }
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    animation: activateMain 1s 7s both;
+
+    .hand-emoji {
+        width: fit-content;
+        font-size: 32px;
+    }
+}
+
+@keyframes disableIntro {
+    from { display: block; z-index: 9; }
+    to { display: none; z-index: -9;}
+}
+
+@keyframes activateMain {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+@media(max-width: 768px) {
+    .intro {
+        flex-direction: column;
+
+        .bar {
+            flex-direction: column;
+        }
+
+        .bio {
+            flex-direction: column;
+            top: 40%;
+        }
+
+        @keyframes bioAnimation {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes barAnimation {
+            from { width: 100%; }
+            to { width: 0; }
+        }
+    }
+
+    @keyframes activateMain {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+}
