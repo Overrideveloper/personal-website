@@ -8,18 +8,6 @@
   Any global CSS variables should also be applied here.
 */
 
-/* :root {
-  --v1-background: rgb(5, 6, 14);
-  --v1-text: #fff;
-  --v1-border: rgb(48, 57, 104);
-  --v1-hover: rgb(48, 57, 104);
-  --v1-header: #a1a1a1;
-  --v1-toggle: #a1a1a1;
-  --v1-svg: white;
-  --v1-hover-text: white;
-  --v1-card-bg: rgb(15, 18, 32);
-} */
-
 :root {
   --v1-background: white;
   --v1-text: black;
@@ -30,6 +18,8 @@
   --v1-svg: black;
   --v1-hover-text: white;
   --v1-card-bg: white;
+
+  --v2-foreground: #1db954;
 }
 
 @import url(../assets/css/bootstrap.min.css);

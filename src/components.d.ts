@@ -24,7 +24,11 @@ export namespace Components {
     }
     interface TalkComponent {
     }
+    interface V2Hero {
+    }
     interface V2Home {
+    }
+    interface V2Nav {
     }
 }
 declare global {
@@ -76,11 +80,23 @@ declare global {
         prototype: HTMLTalkComponentElement;
         new (): HTMLTalkComponentElement;
     };
+    interface HTMLV2HeroElement extends Components.V2Hero, HTMLStencilElement {
+    }
+    var HTMLV2HeroElement: {
+        prototype: HTMLV2HeroElement;
+        new (): HTMLV2HeroElement;
+    };
     interface HTMLV2HomeElement extends Components.V2Home, HTMLStencilElement {
     }
     var HTMLV2HomeElement: {
         prototype: HTMLV2HomeElement;
         new (): HTMLV2HomeElement;
+    };
+    interface HTMLV2NavElement extends Components.V2Nav, HTMLStencilElement {
+    }
+    var HTMLV2NavElement: {
+        prototype: HTMLV2NavElement;
+        new (): HTMLV2NavElement;
     };
     interface HTMLElementTagNameMap {
         "blog-component": HTMLBlogComponentElement;
@@ -91,7 +107,9 @@ declare global {
         "project-component": HTMLProjectComponentElement;
         "root-redirect": HTMLRootRedirectElement;
         "talk-component": HTMLTalkComponentElement;
+        "v2-hero": HTMLV2HeroElement;
         "v2-home": HTMLV2HomeElement;
+        "v2-nav": HTMLV2NavElement;
     }
 }
 declare namespace LocalJSX {
@@ -112,7 +130,11 @@ declare namespace LocalJSX {
     }
     interface TalkComponent {
     }
+    interface V2Hero {
+    }
     interface V2Home {
+    }
+    interface V2Nav {
     }
     interface IntrinsicElements {
         "blog-component": BlogComponent;
@@ -123,7 +145,9 @@ declare namespace LocalJSX {
         "project-component": ProjectComponent;
         "root-redirect": RootRedirect;
         "talk-component": TalkComponent;
+        "v2-hero": V2Hero;
         "v2-home": V2Home;
+        "v2-nav": V2Nav;
     }
 }
 export { LocalJSX as JSX };
@@ -138,7 +162,9 @@ declare module "@stencil/core" {
             "project-component": LocalJSX.ProjectComponent & JSXBase.HTMLAttributes<HTMLProjectComponentElement>;
             "root-redirect": LocalJSX.RootRedirect & JSXBase.HTMLAttributes<HTMLRootRedirectElement>;
             "talk-component": LocalJSX.TalkComponent & JSXBase.HTMLAttributes<HTMLTalkComponentElement>;
+            "v2-hero": LocalJSX.V2Hero & JSXBase.HTMLAttributes<HTMLV2HeroElement>;
             "v2-home": LocalJSX.V2Home & JSXBase.HTMLAttributes<HTMLV2HomeElement>;
+            "v2-nav": LocalJSX.V2Nav & JSXBase.HTMLAttributes<HTMLV2NavElement>;
         }
     }
 }
