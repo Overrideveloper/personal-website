@@ -10,26 +10,24 @@ export class V2Nav {
         return (
             <div>
                 <div class="main-nav">
-                    <h6>Banso</h6>
+                    <h6 class="active">Banso</h6>
 
-                    <a class="active">Home</a>
-                    <a>About</a>
                     <a>Work</a>
                     <a>Articles</a>
                     <a>Talks</a>
                     <a>Projects</a>
+                    <stencil-route-link url='/v1'>v1</stencil-route-link>
                 </div>
 
                 <div class="main-nav-sm">
-                    <h6>Banso</h6>
+                    <h6 class="active">Banso</h6>
 
                     <div class="nav-sm-items">
-                        <a class="active">Home</a>
-                        <a>About</a>
                         <a>Work</a>
                         <a>Articles</a>
                         <a>Talks</a>
                         <a>Projects</a>
+                        <stencil-route-link url='/v1'>v1</stencil-route-link>
                     </div>
                 </div>
             </div>

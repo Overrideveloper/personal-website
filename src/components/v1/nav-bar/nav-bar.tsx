@@ -82,6 +82,7 @@ export class TitleComponent {
             <stencil-route-link class="p-2 black" url='/v1/posts'>Posts</stencil-route-link>
             <stencil-route-link class="p-2 black" url='/v1/projects'>Projects</stencil-route-link>
             <stencil-route-link class="p-2 black" url='/v1/talks'>Talks</stencil-route-link>
+            <stencil-route-link class="p-2 black" url='/v2'>v2</stencil-route-link>
             <a href="javascript: void(0);" class="p-2 black" onClick={() => this.toggleMode()}>{
               this.checked === true ? ("Light mode") : ("Dark mode")}
             </a>
