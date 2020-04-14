@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface V2Nav {
     }
+    interface V2Work {
+    }
 }
 declare global {
     interface HTMLBlogComponentElement extends Components.BlogComponent, HTMLStencilElement {
@@ -98,6 +100,12 @@ declare global {
         prototype: HTMLV2NavElement;
         new (): HTMLV2NavElement;
     };
+    interface HTMLV2WorkElement extends Components.V2Work, HTMLStencilElement {
+    }
+    var HTMLV2WorkElement: {
+        prototype: HTMLV2WorkElement;
+        new (): HTMLV2WorkElement;
+    };
     interface HTMLElementTagNameMap {
         "blog-component": HTMLBlogComponentElement;
         "core-root": HTMLCoreRootElement;
@@ -110,6 +118,7 @@ declare global {
         "v2-hero": HTMLV2HeroElement;
         "v2-home": HTMLV2HomeElement;
         "v2-nav": HTMLV2NavElement;
+        "v2-work": HTMLV2WorkElement;
     }
 }
 declare namespace LocalJSX {
@@ -136,6 +145,8 @@ declare namespace LocalJSX {
     }
     interface V2Nav {
     }
+    interface V2Work {
+    }
     interface IntrinsicElements {
         "blog-component": BlogComponent;
         "core-root": CoreRoot;
@@ -148,6 +159,7 @@ declare namespace LocalJSX {
         "v2-hero": V2Hero;
         "v2-home": V2Home;
         "v2-nav": V2Nav;
+        "v2-work": V2Work;
     }
 }
 export { LocalJSX as JSX };
@@ -165,6 +177,7 @@ declare module "@stencil/core" {
             "v2-hero": LocalJSX.V2Hero & JSXBase.HTMLAttributes<HTMLV2HeroElement>;
             "v2-home": LocalJSX.V2Home & JSXBase.HTMLAttributes<HTMLV2HomeElement>;
             "v2-nav": LocalJSX.V2Nav & JSXBase.HTMLAttributes<HTMLV2NavElement>;
+            "v2-work": LocalJSX.V2Work & JSXBase.HTMLAttributes<HTMLV2WorkElement>;
         }
     }
 }

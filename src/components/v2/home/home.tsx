@@ -10,8 +10,11 @@ export class V2Home {
         return (
             <div class="root">
                 <div class="main">
-                    <v2-nav></v2-nav>
-                    <v2-hero></v2-hero>
+                    <div class="main-content">
+                        <v2-nav></v2-nav>
+                        <v2-hero></v2-hero>
+                        <v2-work></v2-work>
+                    </div>
                     
                     <div class="bio">
                         <h3 class="bio-item" id="engineer">Software Engineer,</h3>

@@ -16,8 +16,7 @@ export class V2Hero {
                         <img src="../../../assets/v2/img/banso.png" alt="A Image of Banso Wisdom"/>
                     </div>
                     <div class="introduction">
-                        <h6 class="intro-title">
-                            <span>&#8213;</span>Software Engineer</h6>
+                        <h6 class="intro-title"><span>&#8213;</span>Software Engineer</h6>
                         <p class="intro-location">Based in Nigeria,<br/> I am a software engineer.</p>
                         <p class="intro-summary">I build <span class="emphasis">beautiful</span> and <span class="emphasis">usable [progressive] web applications</span>,
                             <span class="emphasis"> cross-platform mobile</span> and <span class="emphasis">desktop applications</span>, fulfilling the client's desires as best as possible without compromising performance,

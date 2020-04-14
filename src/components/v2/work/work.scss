@@ -1,0 +1,170 @@
+.v2-work {
+    visibility: hidden;
+    margin: 100px 0 0 0;
+
+    .v2-work-title {
+        color: var(--v2-foreground);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        span {
+            margin-right: 8px;
+        }
+    }
+
+    .v2-work-flex {
+        margin: 32px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .v2-work-detail-flex {
+            margin: 0 0 32px 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .v2-work-detail-card {
+                padding: 32px 24px;
+                height: 160px;
+                background-color: rgb(12, 12, 12);
+                width: 24%;
+                display: flex;
+                align-items: center;
+                color: lightgrey;
+                justify-content: flex-start;
+                border-radius: 10px;
+                transition: all ease-in-out 0.5s;
+                cursor: pointer;
+
+                h6 {
+                    margin: 0;
+                }
+
+                &:not(:last-of-type) {
+                    margin-right: 32px;
+                }
+
+                &.selected {
+                    transform: scale(1.1, 1.1);
+                    background-color: var(--v2-foreground-dim);
+                    color: white;
+
+                    &:not(:last-of-type) {
+                        margin-right: calc(1.1 * 32px);
+                    }
+
+                    :last-of-type {
+                        margin-left: calc((1.1 * 32px) - 32px);
+                    }
+                }
+
+                &:not(.selected) {
+                    &:hover {
+                        h6 {
+                            color: var(--v2-foreground-dim);
+                        }
+                    }
+                }
+            }
+
+            &.sm {
+                display: none;            
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .v2-work-detail-card {
+                    width: 250px;
+                    margin-bottom: 32px;
+
+                    img {
+                        width: 100%;
+                        max-width: 90%;
+                        margin: auto;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .v2-word-detail-info-flex {
+            min-height: 150px;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: var(--v2-foreground-dim);
+            padding: 24px 20px;
+
+            .v2-word-detail-info-flex-inner {
+                display: flex;
+                justify-content: flex-start;
+
+                .info-section {
+                    .title {
+                        background-color: var(--v2-foreground-transp);
+                        border-radius: 102px;
+                        padding: 4px 16px;
+                        color: whitesmoke;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        h6 {
+                            margin: 0 0 2.5px 0;
+                            font-size: 12.5px;
+                        }
+                    }
+
+                    .list {
+                        padding: 10px 6px;
+
+                        p {
+                            margin: 0;
+                            color: whitesmoke;
+                            font-size: 13px;
+
+                            &:not(:last-of-type) {
+                                margin-bottom: 4px;
+                            }
+                        }
+                    }
+                    
+
+                    &:not(:last-of-type) {
+                        margin-right: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.animate {
+        animation: animateWorkSection 2s 0.5s both;
+    }
+}
+
+@keyframes animateWorkSection {
+    from { visibility: hidden; opacity: 0; }
+    to { visibility: visible; opacity: 1; }
+}
+
+@media(max-width:768px) {
+    .v2-work-detail-flex {
+        display: none !important;
+    }
+
+    .v2-work-detail-flex.sm {
+        display: flex !important;
+    }
+}
