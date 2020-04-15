@@ -12,7 +12,7 @@ export class V2Nav {
                 <div class="main-nav">
                     <h6 class="active">Banso</h6>
 
-                    <a>Work</a>
+                    <a href="#v2-work">Work</a>
                     <a>Articles</a>
                     <a>Talks</a>
                     <a>Projects</a>
