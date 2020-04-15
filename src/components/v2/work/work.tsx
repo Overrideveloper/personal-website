@@ -19,7 +19,8 @@ export class V2Work {
 
     componentDidLoad() {
         this.selectedWorkDetailCard = document.querySelector('.v2-work-detail-card.selected');
-        const workEl = document.querySelector('.v2-work');
+
+        const workEl = document.querySelector('#v2-work');
 
         setTimeout(() => {
             workEl.classList.remove('hidden');
@@ -77,63 +78,7 @@ export class V2Work {
         this.CPOpenState = value;
     }
 
-    frontEndTechnologies(sm?: boolean) {
-        if (sm) {
-            return (
-                <div>
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Languages</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>HTML5</p>
-                                <p>CSS3</p>
-                                <p>JavaScript</p>
-                                <p>Typescript</p>
-                                <p>C# (Razor)</p>
-                                <p>SCSS</p>
-                            </div>
-                        </div>
-                    
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Frameworks</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>Angular</p>
-                                <p>Ionic</p>
-                                <p>ASP.NET MVC</p>
-                                <p>ASP.NET Core MVC</p>
-                                <p>Stencil</p>
-                                <p>Vue.js</p>
-                                <p>Bootstrap</p>
-                                <p>Bulma</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Other Tools</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>Firebase Firestore</p>
-                                <p>Firebase Storage</p>
-                                <p>Firebase Cloud Functions</p>
-                                <p>Firebase Realtime Database</p>
-                                <p>Ably Serverless Platform</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
+    frontEndTechnologies() {
         return (
             <div class="v2-word-detail-info-flex-inner">
                 <div class="info-section">
@@ -185,59 +130,7 @@ export class V2Work {
         );
     }
 
-    backEndTechnologies(sm?: boolean) {
-        if (sm) {
-            return (
-                <div>
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Languages</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>C#</p>
-                                <p>JavaScript</p>
-                                <p>Typescript</p>
-                                <p>Python</p>
-                            </div>
-                        </div>
-                    
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Frameworks</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>ASP.NET Web API</p>
-                                <p>ASP.NET Core Web API</p>
-                                <p>Node.js (Express)</p>
-                                <p>Flask</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Other Tools</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>Microsoft SQL Server</p>
-                                <p>MySQL</p>
-                                <p>PostgreSQL</p>
-                                <p>Redis</p>
-                                <p>Hangfire</p>
-                                <p>Firebase Firestore</p>
-                                <p>Firebase Storage</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
+    backEndTechnologies() {
         return (
             <div class="v2-word-detail-info-flex-inner">
                 <div class="info-section">
@@ -285,54 +178,7 @@ export class V2Work {
         );
     }
 
-    crossPlatformTechnologies(sm?: boolean) {
-        if (sm) {
-            return (
-                <div>    
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Languages</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>HTML5</p>
-                                <p>CSS3</p>
-                                <p>Typescript</p>
-                            </div>
-                        </div>
-                    
-                        <div class="info-section">
-                        <span class="title">
-                            <h6>Frameworks</h6>
-                        </span>
-
-                        <div class="list">
-                            <p>Angular</p>
-                            <p>Ionic</p>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="v2-word-detail-info-flex-inner">
-                        <div class="info-section">
-                            <span class="title">
-                                <h6>Other Tools</h6>
-                            </span>
-
-                            <div class="list">
-                                <p>Firebase Firestore</p>
-                                <p>Firebase Storage</p>
-                                <p>Firebase Cloud Functions</p>
-                                <p>Firebase Realtime Database</p>
-                                <p>Cordova</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
+    crossPlatformTechnologies() {
         return (
             <div class="v2-word-detail-info-flex-inner">
                 <div class="info-section">
@@ -389,7 +235,7 @@ export class V2Work {
                                 </button>
                             </div>
                             {
-                               this.FEOpenState ? <div class="v2-work-detail-card-info">{ this.frontEndTechnologies(true) }</div> : ""
+                               this.FEOpenState ? <div class="v2-work-detail-card-info">{ this.frontEndTechnologies() }</div> : ""
                             }
                         </div>
 
@@ -401,7 +247,7 @@ export class V2Work {
                                 </button>
                             </div>
                             {
-                               this.BEOpenState ? <div class="v2-work-detail-card-info">{ this.backEndTechnologies(true) }</div> : ""
+                               this.BEOpenState ? <div class="v2-work-detail-card-info">{ this.backEndTechnologies() }</div> : ""
                             }
                         </div>
 
@@ -413,7 +259,7 @@ export class V2Work {
                                 </button>
                             </div>
                             {
-                               this.CPOpenState ? <div class="v2-work-detail-card-info">{ this.crossPlatformTechnologies(true) }</div> : ""
+                               this.CPOpenState ? <div class="v2-work-detail-card-info">{ this.crossPlatformTechnologies() }</div> : ""
                             }
                         </div>
                     </div>
