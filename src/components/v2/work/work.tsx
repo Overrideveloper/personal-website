@@ -31,11 +31,9 @@ export class V2Work {
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.map(entry => {
-                    if (entry.intersectionRatio > 0) {
+                    if (entry.isIntersecting) {
                         entry.target.classList.add('animate');
                         observer.unobserve(entry.target);
-                    } else {
-                        entry.target.classList.remove('animate');
                     }
                 });
             });
@@ -46,7 +44,7 @@ export class V2Work {
 
     frontEndTechnologies() {
         return (
-            <div class="v2-word-detail-info-flex-inner">
+            <div class="v2-word-detail-info-flex-inner transition">
                 <div class="info-section">
                     <span class="title">
                         <h6>Languages</h6>
