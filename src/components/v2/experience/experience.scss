@@ -78,6 +78,13 @@
                 }
             }
 
+            .redacted {
+                color: transparent;
+                background-color: gray;
+                border-radius: 2px;
+                max-width: 50%;
+            }
+
             &:not(:last-of-type) {
                 margin-bottom: 32px;
 
