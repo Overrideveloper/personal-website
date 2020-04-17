@@ -206,8 +206,8 @@
                         border-radius: 8px;
                         margin-bottom: 10px;
 
-                        &:not(:last-of-type) {
-                            margin-right: 8px;
+                        &:not(:first-of-type) {
+                            margin-left: 8px;
                         }
                     }
                 }

@@ -57,7 +57,7 @@ export class V2Experience {
                 type: 'Internship',
                 location: { state: 'Abuja', country: 'Nigeria' },
                 duration: 'Mar 2018 - Sep 2017',
-                domains: ['Education', 'Human Resource Management']
+                domains: ['Education', 'Human Resource Management', 'Human Resource Management']
             }
         ]
     }
@@ -106,12 +106,13 @@ export class V2Experience {
                                         </h6>
                                         <h6 class={ `job-duration ${this.redactedClass(job.duration)}` }>{job.duration}</h6>
                                     </div>
-
-                                    {
-                                        job.domains.map(domain => {
-                                            return ( <span class={ `job-domain ${this.redactedClass(domain)}` }>{domain}</span> );
-                                        })
-                                    }
+                                    <div class="domain-flex">
+                                        {
+                                            job.domains.map(domain => {
+                                                return ( <span class={ `job-domain ${this.redactedClass(domain)}` }>{domain}</span> );
+                                            })
+                                        }
+                                    </div>
                                 </div>
                             );
                         })
