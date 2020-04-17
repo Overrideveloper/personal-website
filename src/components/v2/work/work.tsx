@@ -35,7 +35,7 @@ export class V2Work {
             });
 
             observer.observe(workEl);
-        }, 8500);
+        }, 6600);
     }
 
     selectWorkDetailCard(el: HTMLDivElement, detailType: string) {

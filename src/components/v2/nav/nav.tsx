@@ -14,7 +14,7 @@ export class V2Nav {
 
                     <a href="#v2-work">Work</a>
                     <a>Projects</a>
-                    <a>Future</a>
+                    <a>The Future</a>
                     <stencil-route-link url='/v1'>v1</stencil-route-link>
                 </div>
 
@@ -24,7 +24,7 @@ export class V2Nav {
                     <div class="nav-sm-items">
                         <a href="#v2-work">Work</a>
                         <a>Projects</a>
-                        <a>Future</a>
+                        <a>The Future</a>
                         <stencil-route-link url='/v1'>v1</stencil-route-link>
                     </div>
                 </div>

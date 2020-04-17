@@ -46,6 +46,7 @@ export class V2Projects {
 
     componentDidLoad() {
         const projectsEl = document.querySelector('#v2-projects');
+        const projectSections = Array.from(document.querySelectorAll('.project-section'));
 
         setTimeout(() => {
             projectsEl.classList.remove('hidden');
@@ -60,7 +61,8 @@ export class V2Projects {
             });
 
             observer.observe(projectsEl);
-        }, 8500);
+            projectSections.map(section => observer.observe(section));
+        }, 6600);
     }
 
     render() {

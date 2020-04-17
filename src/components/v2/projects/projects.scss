@@ -19,9 +19,14 @@
         flex-direction: column;
 
         .project-section {
+            visibility: hidden;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            &.animate {
+                animation: animateProjectsSection 1.5s 0.5s both;
+            }
 
             &:nth-of-type(even) {
                 flex-direction: row-reverse;
@@ -224,13 +229,18 @@
     }
 
     &.animate {
-        animation: animateProjectsSection 1.5s 0.5s both;
+        animation: animateProjectsSegment 1.5s 0.5s both;
     }
 }
 
-@keyframes animateProjectsSection {
+@keyframes animateProjectsSegment {
     from { visibility: hidden; opacity: 0; }
     to { visibility: visible; opacity: 1; }
+}
+
+@keyframes animateProjectsSection {
+    from { visibility: hidden; opacity: 0; transform: translateY(10px); }
+    to { visibility: visible; opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {

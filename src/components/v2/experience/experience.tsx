@@ -7,6 +7,7 @@ interface JobWorked {
     location: { state: string, country: string };
     duration: string;
     domains: string[];
+    present?: boolean;
 }
 
 @Component({
@@ -64,6 +65,7 @@ export class V2Experience {
 
     componentDidLoad() {
         const experienceEl = document.querySelector('#v2-experience');
+        const experienceCards = Array.from(document.querySelectorAll('.v2-experience-card'));
 
         setTimeout(() => {
             experienceEl.classList.remove('hidden');
@@ -78,7 +80,8 @@ export class V2Experience {
             });
 
             observer.observe(experienceEl);
-        }, 8500);
+            experienceCards.map(card => observer.observe(card));
+        }, 6600);
     }
 
     redactedClass = (field: string) => field.toLowerCase() === 'redacted' ? 'redacted' : '';
@@ -92,7 +95,7 @@ export class V2Experience {
                     {
                         this.jobsWorked.map(job => {
                             return (
-                                <div class="v2-experience-card">
+                                <div class={`v2-experience-card ${job.present ? 'present' : ''}`}>
                                     <h4 class={ `company-name ${this.redactedClass(job.company)}` }>{job.company}</h4>
 
                                     <div class="job-flex">
@@ -104,6 +107,7 @@ export class V2Experience {
                                         <h6 class={ `job-location ${this.redactedClass(job.location.state)} ${this.redactedClass(job.location.country)}` }>
                                             {job.location.state} :: {job.location.country}
                                         </h6>
+
                                         <h6 class={ `job-duration ${this.redactedClass(job.duration)}` }>{job.duration}</h6>
                                     </div>
                                     <div class="domain-flex">
