@@ -1,0 +1,122 @@
+.v2-future {
+    visibility: hidden;
+    margin: 150px 0 0 0;
+
+    .v2-future-title {
+        color: var(--v2-foreground);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        span {
+            margin-right: 8px;
+        }
+    }
+
+    .v2-future-flex {
+        margin: 64px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+
+        h3, h4 {
+            visibility: hidden;
+            font-size: 32px;
+            margin: 5px 0;
+            color: lightgrey;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        p {
+            color: whitesmoke;
+
+            &:first-of-type {
+                margin: 16px 0 0 0;
+                font-size: 16px;
+            }
+
+            &:last-of-type {
+                margin: 4px 0 24px 0;
+                font-size: 14px;
+            }
+        }
+
+        .v2-future-cta {
+            visibility: hidden;
+        }
+
+        button {
+            padding: 6px 16px 8px 16px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: var(--v2-foreground-dim-ultra);
+            color: var(--v2-foreground-dim);
+            border-radius: 6px;
+            font-weight: 500;
+
+            &:hover {
+                border: 0.5px solid var(--v2-foreground-dim);
+                color: var(--v2-foreground);
+                background-color: var(--v2-foreground-glass);
+            }
+
+            transition: all 0.5s ease;
+        }
+
+        &.animate {
+            h3 {
+                animation: animateItemY 1s 0.3s both;
+            }
+
+            h4 {
+                &:first-of-type {
+                    animation: animateItemY 1s 0.5s both;
+                }
+
+                &:last-of-type {
+                    animation: animateItemY 1s 0.7s both;
+                }
+            }
+
+            .v2-future-cta {
+                animation: animateItemY 1s 1s both;
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.animate {
+        animation: animateFutureSection 1s 0.3s both;
+    }
+}
+
+@keyframes animateFutureSection {
+    from { visibility: hidden; opacity: 0; }
+    to { visibility: visible; opacity: 1; }
+}
+
+@keyframes animateItemY {
+    from { visibility: hidden; opacity: 0; transform: translateY(10px); }
+    to { visibility: visible; opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .v2-future-flex {
+        text-align: left !important;
+
+        h3, h4 {
+            font-size: 22px !important;
+        }
+
+        button {
+            font-size: 16px !important;
+        }
+    }
+}

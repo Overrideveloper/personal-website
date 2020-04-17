@@ -13,8 +13,8 @@ export class V2Nav {
                     <h6 class="active">Banso</h6>
 
                     <a href="#v2-work">Work</a>
-                    <a>Projects</a>
-                    <a>The Future</a>
+                    <a href="#v2-projects">Projects</a>
+                    <a href="#v2-next-steps">Next Steps</a>
                     <stencil-route-link url='/v1'>v1</stencil-route-link>
                 </div>
 
@@ -23,8 +23,8 @@ export class V2Nav {
 
                     <div class="nav-sm-items">
                         <a href="#v2-work">Work</a>
-                        <a>Projects</a>
-                        <a>The Future</a>
+                        <a href="#v2-projects">Projects</a>
+                        <a href="#v2-next-steps">Next Steps</a>
                         <stencil-route-link url='/v1'>v1</stencil-route-link>
                     </div>
                 </div>

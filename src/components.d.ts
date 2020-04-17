@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface V2Experience {
     }
+    interface V2Future {
+    }
     interface V2Hero {
     }
     interface V2Home {
@@ -92,6 +94,12 @@ declare global {
         prototype: HTMLV2ExperienceElement;
         new (): HTMLV2ExperienceElement;
     };
+    interface HTMLV2FutureElement extends Components.V2Future, HTMLStencilElement {
+    }
+    var HTMLV2FutureElement: {
+        prototype: HTMLV2FutureElement;
+        new (): HTMLV2FutureElement;
+    };
     interface HTMLV2HeroElement extends Components.V2Hero, HTMLStencilElement {
     }
     var HTMLV2HeroElement: {
@@ -132,6 +140,7 @@ declare global {
         "root-redirect": HTMLRootRedirectElement;
         "talk-component": HTMLTalkComponentElement;
         "v2-experience": HTMLV2ExperienceElement;
+        "v2-future": HTMLV2FutureElement;
         "v2-hero": HTMLV2HeroElement;
         "v2-home": HTMLV2HomeElement;
         "v2-nav": HTMLV2NavElement;
@@ -159,6 +168,8 @@ declare namespace LocalJSX {
     }
     interface V2Experience {
     }
+    interface V2Future {
+    }
     interface V2Hero {
     }
     interface V2Home {
@@ -179,6 +190,7 @@ declare namespace LocalJSX {
         "root-redirect": RootRedirect;
         "talk-component": TalkComponent;
         "v2-experience": V2Experience;
+        "v2-future": V2Future;
         "v2-hero": V2Hero;
         "v2-home": V2Home;
         "v2-nav": V2Nav;
@@ -199,6 +211,7 @@ declare module "@stencil/core" {
             "root-redirect": LocalJSX.RootRedirect & JSXBase.HTMLAttributes<HTMLRootRedirectElement>;
             "talk-component": LocalJSX.TalkComponent & JSXBase.HTMLAttributes<HTMLTalkComponentElement>;
             "v2-experience": LocalJSX.V2Experience & JSXBase.HTMLAttributes<HTMLV2ExperienceElement>;
+            "v2-future": LocalJSX.V2Future & JSXBase.HTMLAttributes<HTMLV2FutureElement>;
             "v2-hero": LocalJSX.V2Hero & JSXBase.HTMLAttributes<HTMLV2HeroElement>;
             "v2-home": LocalJSX.V2Home & JSXBase.HTMLAttributes<HTMLV2HomeElement>;
             "v2-nav": LocalJSX.V2Nav & JSXBase.HTMLAttributes<HTMLV2NavElement>;

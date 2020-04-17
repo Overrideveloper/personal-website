@@ -25,7 +25,7 @@
             justify-content: space-between;
 
             &.animate {
-                animation: animateProjectsSection 1.5s 0.5s both;
+                animation: animateProjectsSection 1s 0.3s both;
             }
 
             &:nth-of-type(even) {
@@ -171,6 +171,8 @@
                                     border: 0.5px solid var(--v2-foreground-dim);
                                     background-color: transparent;
                                 }
+
+                                transition: all 0.5s ease;
                             }
                         }
                     }
@@ -229,7 +231,7 @@
     }
 
     &.animate {
-        animation: animateProjectsSegment 1.5s 0.5s both;
+        animation: animateProjectsSegment 1s 0.3s both;
     }
 }
 

@@ -16,6 +16,7 @@ export class V2Home {
                         <v2-work></v2-work>
                         <v2-experience></v2-experience>
                         <v2-projects></v2-projects>
+                        <v2-future></v2-future>
                     </div>
                     
                     <div class="bio">

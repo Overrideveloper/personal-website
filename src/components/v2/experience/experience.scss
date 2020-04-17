@@ -33,7 +33,7 @@
             color: lightgray;
 
             &.animate {
-                animation: animateExperienceCard 1.5s 0.5s both;
+                animation: animateExperienceCard 1s 0.3s both;
             }
 
             &.present {
@@ -127,7 +127,7 @@
     }
 
     &.animate {
-        animation: animateExperienceSection 1.5s 0.5s both;
+        animation: animateExperienceSection 1s 0.3s both;
     }
 }
 
