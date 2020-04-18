@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /projects
-Disallow: /posts
-Disallow: /talks
 
-Sitemap: http://banso-wisdom.firebaseapp.com/sitemap.xml
+Sitemap: http://banso-wisdom.web./sitemap.xml

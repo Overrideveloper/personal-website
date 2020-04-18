@@ -8,7 +8,7 @@ import { Component, h } from '@stencil/core';
 export class V2Future {
 
     componentDidLoad() {
-        const futureEl = document.querySelector('#v2-next-steps');
+        const futureEl = document.querySelector('#v2-contact');
 
         setTimeout(() => {
             futureEl.classList.remove('hidden');
@@ -31,8 +31,8 @@ export class V2Future {
 
     render() {
         return (
-            <div id="v2-next-steps" class="v2-future hidden">
-                <h3 class="v2-future-title"><span>&#8213;</span>Next Steps</h3>
+            <div id="v2-contact" class="v2-future hidden">
+                <h3 class="v2-future-title"><span>&#8213;</span>Contact</h3>
 
                 <div class="v2-future-flex">
                     <h3>Do you have an idea?</h3>

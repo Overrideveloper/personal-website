@@ -7,22 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { RouterHistory, } from "@stencil/router";
 export namespace Components {
-    interface BlogComponent {
-    }
     interface CoreRoot {
-    }
-    interface FooterComponent {
-    }
-    interface HomeComponent {
-    }
-    interface NavBar {
-    }
-    interface ProjectComponent {
     }
     interface RootRedirect {
         "history": RouterHistory;
-    }
-    interface TalkComponent {
     }
     interface V2Experience {
     }
@@ -42,53 +30,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLBlogComponentElement extends Components.BlogComponent, HTMLStencilElement {
-    }
-    var HTMLBlogComponentElement: {
-        prototype: HTMLBlogComponentElement;
-        new (): HTMLBlogComponentElement;
-    };
     interface HTMLCoreRootElement extends Components.CoreRoot, HTMLStencilElement {
     }
     var HTMLCoreRootElement: {
         prototype: HTMLCoreRootElement;
         new (): HTMLCoreRootElement;
     };
-    interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
-    }
-    var HTMLFooterComponentElement: {
-        prototype: HTMLFooterComponentElement;
-        new (): HTMLFooterComponentElement;
-    };
-    interface HTMLHomeComponentElement extends Components.HomeComponent, HTMLStencilElement {
-    }
-    var HTMLHomeComponentElement: {
-        prototype: HTMLHomeComponentElement;
-        new (): HTMLHomeComponentElement;
-    };
-    interface HTMLNavBarElement extends Components.NavBar, HTMLStencilElement {
-    }
-    var HTMLNavBarElement: {
-        prototype: HTMLNavBarElement;
-        new (): HTMLNavBarElement;
-    };
-    interface HTMLProjectComponentElement extends Components.ProjectComponent, HTMLStencilElement {
-    }
-    var HTMLProjectComponentElement: {
-        prototype: HTMLProjectComponentElement;
-        new (): HTMLProjectComponentElement;
-    };
     interface HTMLRootRedirectElement extends Components.RootRedirect, HTMLStencilElement {
     }
     var HTMLRootRedirectElement: {
         prototype: HTMLRootRedirectElement;
         new (): HTMLRootRedirectElement;
-    };
-    interface HTMLTalkComponentElement extends Components.TalkComponent, HTMLStencilElement {
-    }
-    var HTMLTalkComponentElement: {
-        prototype: HTMLTalkComponentElement;
-        new (): HTMLTalkComponentElement;
     };
     interface HTMLV2ExperienceElement extends Components.V2Experience, HTMLStencilElement {
     }
@@ -139,14 +91,8 @@ declare global {
         new (): HTMLV2WorkElement;
     };
     interface HTMLElementTagNameMap {
-        "blog-component": HTMLBlogComponentElement;
         "core-root": HTMLCoreRootElement;
-        "footer-component": HTMLFooterComponentElement;
-        "home-component": HTMLHomeComponentElement;
-        "nav-bar": HTMLNavBarElement;
-        "project-component": HTMLProjectComponentElement;
         "root-redirect": HTMLRootRedirectElement;
-        "talk-component": HTMLTalkComponentElement;
         "v2-experience": HTMLV2ExperienceElement;
         "v2-footer": HTMLV2FooterElement;
         "v2-future": HTMLV2FutureElement;
@@ -158,22 +104,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface BlogComponent {
-    }
     interface CoreRoot {
-    }
-    interface FooterComponent {
-    }
-    interface HomeComponent {
-    }
-    interface NavBar {
-    }
-    interface ProjectComponent {
     }
     interface RootRedirect {
         "history"?: RouterHistory;
-    }
-    interface TalkComponent {
     }
     interface V2Experience {
     }
@@ -192,14 +126,8 @@ declare namespace LocalJSX {
     interface V2Work {
     }
     interface IntrinsicElements {
-        "blog-component": BlogComponent;
         "core-root": CoreRoot;
-        "footer-component": FooterComponent;
-        "home-component": HomeComponent;
-        "nav-bar": NavBar;
-        "project-component": ProjectComponent;
         "root-redirect": RootRedirect;
-        "talk-component": TalkComponent;
         "v2-experience": V2Experience;
         "v2-footer": V2Footer;
         "v2-future": V2Future;
@@ -214,14 +142,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "blog-component": LocalJSX.BlogComponent & JSXBase.HTMLAttributes<HTMLBlogComponentElement>;
             "core-root": LocalJSX.CoreRoot & JSXBase.HTMLAttributes<HTMLCoreRootElement>;
-            "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
-            "home-component": LocalJSX.HomeComponent & JSXBase.HTMLAttributes<HTMLHomeComponentElement>;
-            "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
-            "project-component": LocalJSX.ProjectComponent & JSXBase.HTMLAttributes<HTMLProjectComponentElement>;
             "root-redirect": LocalJSX.RootRedirect & JSXBase.HTMLAttributes<HTMLRootRedirectElement>;
-            "talk-component": LocalJSX.TalkComponent & JSXBase.HTMLAttributes<HTMLTalkComponentElement>;
             "v2-experience": LocalJSX.V2Experience & JSXBase.HTMLAttributes<HTMLV2ExperienceElement>;
             "v2-footer": LocalJSX.V2Footer & JSXBase.HTMLAttributes<HTMLV2FooterElement>;
             "v2-future": LocalJSX.V2Future & JSXBase.HTMLAttributes<HTMLV2FutureElement>;

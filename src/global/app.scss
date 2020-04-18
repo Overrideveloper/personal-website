@@ -9,16 +9,6 @@
 */
 
 :root {
-  --v1-background: white;
-  --v1-text: black;
-  --v1-border: black;
-  --v1-hover: goldenrod;
-  --v1-header: black;
-  --v1-toggle: lightgrey;
-  --v1-svg: black;
-  --v1-hover-text: white;
-  --v1-card-bg: white;
-
   --v2-foreground: #1db954;
   --v2-foreground-dim: #1db9548f;
   --v2-foreground-dim-alt: rgba(29, 185, 84, 0.2);
@@ -26,9 +16,6 @@
   --v2-foreground-transp: rgba(211, 211, 211, 0.3);
   --v2-glass: rgba(12, 12, 12, 0.7);
 }
-
-@import url(../assets/css/bootstrap.min.css);
-@import url(../assets/nprogress/nprogress.css);
 
 @font-face {
   font-family: 'Tiempos';
@@ -46,79 +33,4 @@
 	font-family: 'Graphik';
   font-display: fallback;
 	src: url(../assets/fonts/Graphik-Regular.woff2);
-}
-
-.app-v1 {
-  margin: 1em;
-  border: solid 1px var(--v1-border);
-  background-color: var(--v1-background);
-  font-family: 'Graphik';
-  color: black;
-
-  .icon path, .img-icon path {
-    fill: var(--v1-svg) !important;
-  }
-
-  @media(min-width: 768px) {
-    .container {
-      padding-left: 5em !important;
-      padding-right: 5em !important;
-    }
-  }
-
-  .card {
-    background: var(--v1-card-bg);
-    border-radius: 0 !important;
-    border: 1px var(--v1-border) solid !important;
-  }
-
-  .bold {
-    font-weight: 600;
-  }
-
-  .black, p {
-    color: var(--v1-text) !important;
-  }
-
-  .ud {
-    text-decoration-line: underline;
-    transition-property: all;
-    transition: all;
-    transition-duration: 1s;
-  }
-
-  #intro {
-    font-family: 'Tiempos' !important;
-    color: var(--v1-text);
-  }
-
-  span.ud:hover {
-    color: var(--v1-hover-text) !important;
-    background-color: var(--v1-hover);
-    padding: 0.2em;
-    text-decoration-line: none;
-  }
-
-  a {
-    transition-property: all;
-    transition: all;
-    transition-duration: 1s;
-  }
-
-  a:hover {
-    color: var(--v1-hover) !important;
-  }
-
-  .ul {
-    transition-property: all;
-    transition: all;
-    transition-duration: 1s;
-  }
-
-  span.ud:hover, span.ul:hover {
-    color: var(--v1-hover-text) !important;
-    background-color: var(--v1-hover);
-    padding: 0.2em;
-    text-decoration-line: none;
-  }
 }

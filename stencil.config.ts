@@ -13,7 +13,7 @@ export const config: Config = {
         globPatterns: [
           '**/*.{js,css,json,jpeg,jpg,html,ico,png}'
         ]
-      }
+      },
       // uncomment the following line to disable service workers in production
       // serviceWorker: null
     }
