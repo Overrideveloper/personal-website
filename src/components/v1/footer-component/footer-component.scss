@@ -20,8 +20,8 @@ footer {
   min-width: 20px !important;
 }
 
-label, .form-text, a {
-  color: var(--v1-header) !important;
+label, .form-text, li#git > a, li#tweet > a {
+  color: var(--v1-header);
 }
 
 #toggle {

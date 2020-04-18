@@ -74,3 +74,19 @@
         }
     }
 }
+
+v2-nav {
+    transition: all 0.5s ease;
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: 80%;
+        background-color: black;
+        z-index: 99;
+        padding-top: 30px;
+        
+        &+ v2-content {
+            padding-top: 60px;
+        }
+    }
+}

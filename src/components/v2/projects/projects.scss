@@ -67,7 +67,7 @@
                     text-transform: capitalize;
 
                     .project-link {
-                        color: var(--v2-foreground);
+                        color: var(--v2-foreground) !important;
                         font-size: 11px;
                     }
                 }
