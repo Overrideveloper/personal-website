@@ -58,7 +58,7 @@ export class V2Experience {
                 type: 'Internship',
                 location: { state: 'Abuja', country: 'Nigeria' },
                 duration: 'Mar 2018 - Sep 2017',
-                domains: ['Education', 'Human Resource Management', 'Human Resource Management']
+                domains: ['Education', 'Human Resource Management']
             }
         ]
     }
