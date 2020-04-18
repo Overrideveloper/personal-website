@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface V2Experience {
     }
+    interface V2Footer {
+    }
     interface V2Future {
     }
     interface V2Hero {
@@ -94,6 +96,12 @@ declare global {
         prototype: HTMLV2ExperienceElement;
         new (): HTMLV2ExperienceElement;
     };
+    interface HTMLV2FooterElement extends Components.V2Footer, HTMLStencilElement {
+    }
+    var HTMLV2FooterElement: {
+        prototype: HTMLV2FooterElement;
+        new (): HTMLV2FooterElement;
+    };
     interface HTMLV2FutureElement extends Components.V2Future, HTMLStencilElement {
     }
     var HTMLV2FutureElement: {
@@ -140,6 +148,7 @@ declare global {
         "root-redirect": HTMLRootRedirectElement;
         "talk-component": HTMLTalkComponentElement;
         "v2-experience": HTMLV2ExperienceElement;
+        "v2-footer": HTMLV2FooterElement;
         "v2-future": HTMLV2FutureElement;
         "v2-hero": HTMLV2HeroElement;
         "v2-home": HTMLV2HomeElement;
@@ -168,6 +177,8 @@ declare namespace LocalJSX {
     }
     interface V2Experience {
     }
+    interface V2Footer {
+    }
     interface V2Future {
     }
     interface V2Hero {
@@ -190,6 +201,7 @@ declare namespace LocalJSX {
         "root-redirect": RootRedirect;
         "talk-component": TalkComponent;
         "v2-experience": V2Experience;
+        "v2-footer": V2Footer;
         "v2-future": V2Future;
         "v2-hero": V2Hero;
         "v2-home": V2Home;
@@ -211,6 +223,7 @@ declare module "@stencil/core" {
             "root-redirect": LocalJSX.RootRedirect & JSXBase.HTMLAttributes<HTMLRootRedirectElement>;
             "talk-component": LocalJSX.TalkComponent & JSXBase.HTMLAttributes<HTMLTalkComponentElement>;
             "v2-experience": LocalJSX.V2Experience & JSXBase.HTMLAttributes<HTMLV2ExperienceElement>;
+            "v2-footer": LocalJSX.V2Footer & JSXBase.HTMLAttributes<HTMLV2FooterElement>;
             "v2-future": LocalJSX.V2Future & JSXBase.HTMLAttributes<HTMLV2FutureElement>;
             "v2-hero": LocalJSX.V2Hero & JSXBase.HTMLAttributes<HTMLV2HeroElement>;
             "v2-home": LocalJSX.V2Home & JSXBase.HTMLAttributes<HTMLV2HomeElement>;

@@ -37,6 +37,12 @@
 }
 
 @font-face {
+  font-family: 'LeagueSpartan';
+  font-display: fallback;
+	src: url(../assets/v2/fonts/LeagueSpartan-Bold.otf);
+}
+
+@font-face {
 	font-family: 'Graphik';
   font-display: fallback;
 	src: url(../assets/fonts/Graphik-Regular.woff2);
@@ -49,7 +55,6 @@
   font-family: 'Graphik';
   color: black;
 
-  
   .icon path, .img-icon path {
     fill: var(--v1-svg) !important;
   }

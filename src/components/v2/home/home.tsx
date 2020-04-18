@@ -34,6 +34,7 @@ export class V2Home {
                             <v2-projects></v2-projects>
                             <v2-future></v2-future>
                         </v2-content>
+                        <v2-footer></v2-footer>
                     </div>
                     
                     <div class="bio">
